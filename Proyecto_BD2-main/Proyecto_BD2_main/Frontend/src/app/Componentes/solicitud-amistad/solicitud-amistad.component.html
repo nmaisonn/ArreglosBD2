@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+      <h5>Informacion Persona</h5>
+    </div>
+    <div class="card-body">
+      <div *ngIf="this.amigo.amigo">
+        <div>
+          <p class="card-text">Nombre: {{amigo.amigo.nombre}} </p>
+        </div>
+        <div>
+          <p class="card-text">Apellido: {{amigo.amigo.apellido}} </p>
+        </div>
+      </div>
+      <div>
+        <p class="card-text">Fecha Solicitud: {{amigo.fechasolicitud}} </p>
+      </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="addAmigo()">Aceptar</button>
+      <button type="button" class="btn btn-danger" (click)="cancelAmigo()">Rechazar</button>
+    </div>
+  </div>

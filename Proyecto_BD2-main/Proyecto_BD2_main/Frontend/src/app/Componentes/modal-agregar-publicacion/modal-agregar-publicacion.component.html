@@ -1,0 +1,63 @@
+<ng-template #myModal let-modal let-c="close" let-d="dismiss" role="dialog">
+  <div class="modal-header" id="titulo">
+    <h2 class="modal-title" id="modal-basic-title">Agregar publicacion</h2>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="divs">
+      <label for="titulo">Titulo:</label>
+      <input type="text" id="titulo" name="titulo" [(ngModel)] = "nombre" >
+    </div>
+    <div class="divs" *ngIf="this.habilidades">
+      <label for="category">Habilidades:</label>
+      <select (change)="updateHabilidad($event)">
+        <option value="default">Seleccionar Habilidad</option>
+        <option value={{item.idhabilidad}} *ngFor="let item of this.habilidades">
+            {{item.nombre}}
+        </option>
+      </select>
+    </div>
+    <div class="divs">
+      <label for="descripcion">Descripcion:</label>
+      <textarea name="descripcion" id="descripcion" cols="30" rows="2" [(ngModel)] = "descripcion"></textarea>
+    </div>
+    <div class="divs">
+      <label class="form-check-label" for="flexCheckDefault">
+        Presencial:
+      </label>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)] = "presencial">
+    </div>
+  </div>
+  <div class="divs">
+    <label for="calle">Calle:</label>
+    <input type="text" id="calle" name="calle" [(ngModel)] = "calle">
+  </div>
+  <div class="divs">
+    <label for="numero">Numero:</label>
+    <input type="number" id="numero" name="numero" [(ngModel)] = "numero">
+  </div>
+  <div class="divs">
+    <label for="esquina">Esquina:</label>
+    <input type="text" id="esquina" name="esquina" [(ngModel)] = "esquina">
+  </div>
+  <div class="divs">
+    <label for="barrios">Barrio:</label>
+    <select (change)="update($event)">
+      <option value="default">Seleccionar Barrios</option>
+      <option value="{{ item.idbarrio }}" *ngFor="let item of barrios">
+        {{ item.nombre }}
+      </option>
+    </select>
+  </div>
+  <div class="modal-footer">
+    <button mat-stroked-button type="button" class="btn btn-outline-dark" data-dismiss="modal"
+      (click)="addPublicaciones()">
+      Save
+    </button>
+    <button mat-stroked-button type="button" class="btn btn-outline-dark" data-dismiss="modal"
+      (click)="this.resetearValores()">
+      Limpiar
+    </button>
+  </div>
+</ng-template>
+  <button id="btnAgregarPubli" class="btn btn-lg" (click)="open(myModal)">Agregar</button>

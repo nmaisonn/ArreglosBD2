@@ -1,0 +1,51 @@
+Requerimientos:
+1)- Registrarme
+		Login
+		Registro
+		ABM Usuario
+
+2)- Carga habilidades/caulidades
+		ABM Habilidades de un usuario
+
+3)- Postear habilidades/caulidades
+
+4)- Coordinacion? Se le habre un chat? El que quiere marca cita y el otro acepta?
+		4.1)- Seleccionar posteo, marcar para cuando quiero cita
+		4.2)- Solicitudes de citas pendientes a aprobar
+
+5)- Seccion para ver solicitudes de citas pendientes
+		ABM Citas
+			Tener una agenda de las citas de la semana y poder cancelarlas/(Modificarlas)
+
+6)- Seccion para ver solicitudes de amistad pendientes 
+
+7)- Seccion de perfil con info de la persona y boton para agregar a amigo
+
+8)- Registro de cada servicio realizado
+		El cliente marca que el servicio se finalizo. Manejar estados
+		
+9)- Busqueda de servicios por filtro (Enum de habilidades? o que ingresen las que quieran)
+		Habilidades
+		Presencialidad
+		Barrio
+
+10)- Amistades
+		ABM Amistades de una persona
+		
+11)- Busqueda de personas por filtros para agregar a amigo
+		Barrio
+		Nombre apellido
+
+12)- Autenticacion? VER ESTO
+
+13)- Geolocalizacon? VER ESTO
+
+14)- Ver historial de servicios realizados
+
+15)- Ver historial de servicios recibidos
+
+16)- Calificar personas a las cuales hice servicio
+
+17)- Calificar personas que me hicieron servicio
+
+

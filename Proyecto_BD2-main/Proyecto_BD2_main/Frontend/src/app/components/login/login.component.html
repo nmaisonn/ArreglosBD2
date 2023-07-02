@@ -1,0 +1,17 @@
+<div class="div-fuera">
+  <div class="full-height">
+    <div id="container">
+      <div id="login">
+        <h2>¡Bienvenidos a TuApp!</h2>
+        <h3>Ingrese sus credenciales para ingresar</h3>
+        <form id="formulario">
+          <input [(ngModel)]="ci" name="ci" type="text" placeholder="CI" />
+          <input [(ngModel)]="pass" name="pass" type="password" placeholder="Contraseña" />
+          
+          <button (click)="loginUser(ci,pass)">Login</button>
+          <a href="/register">Registrarse</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

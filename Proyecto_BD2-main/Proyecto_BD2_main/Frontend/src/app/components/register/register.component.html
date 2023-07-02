@@ -1,0 +1,37 @@
+<div class="div-fuera">
+  <div class="full-height">
+    <div id="container">
+      <div id="login">
+        <h2>¡Bienvenidos a TuApp!</h2>
+        <h3>Ingrese sus credenciales para registrarse</h3>
+        <form id="formulario">
+          
+          <label>Información Personal</label>
+          <input name="nombre" [(ngModel)]="nombre"  placeholder="Nombre">
+          <input [(ngModel)]="apellido" name="apellido" placeholder="Apellido">
+          <input [(ngModel)]="ci" name="ci" placeholder="CI">
+          <input [(ngModel)]="fecha" name="fecha" type="date">
+          <input type="password" [(ngModel)]="pass" name="pass" placeholder="Contraseña" />
+
+          <label>Dirección</label>
+
+          <select (change)="update($event)">
+                      <option value="default">Barrio</option>
+                      <option value="{{ item.idbarrio }}" *ngFor="let item of barrios">
+                        {{ item.nombre }}
+                      </option>
+                    </select>
+
+          <input [(ngModel)]="calle" name="calle" placeholder="Calle">
+          <input [(ngModel)]="esquina" name="esquina" placeholder="Esquina">
+          <input [(ngModel)]="numpuerta" name="numpuerta" placeholder="Número de puerta">
+
+          
+          <button
+            (click)="registerUser(nombre,apellido,ci,fecha,pass,calle,esquina,numpuerta)">Registrarse</button>
+            <a href="/login">Iniciar Sesión</a>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

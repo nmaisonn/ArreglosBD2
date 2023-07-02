@@ -1,0 +1,19 @@
+<div class="div-fuera">
+    <div class="full-height">
+        <h1>Historial Citas</h1>
+        <div class="row justify-content-center">
+            <div class="realizadas col">
+                <h2> Citas Realizadas </h2>
+                <div *ngFor="let cita of citasRealizadas">
+                    <app-publicaciones-realizadas [cita]="cita"></app-publicaciones-realizadas>
+                </div>
+            </div>
+            <div class="recibidas col">
+                <h2>Citas Solicitadas</h2>
+                <div *ngFor="let cita of citasRecibidas">
+                    <app-publicaciones-recibidas [cita]="cita"></app-publicaciones-recibidas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

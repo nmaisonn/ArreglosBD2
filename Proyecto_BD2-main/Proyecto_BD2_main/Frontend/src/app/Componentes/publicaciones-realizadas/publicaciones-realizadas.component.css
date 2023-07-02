@@ -1,0 +1,42 @@
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #333333;
+}
+
+
+.d-flex.inline-block {
+    display: flex;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.d-flex.inline-block>span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #2b8c38;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: auto;
+}

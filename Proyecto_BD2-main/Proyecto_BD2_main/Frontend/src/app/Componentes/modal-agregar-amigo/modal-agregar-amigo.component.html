@@ -1,0 +1,14 @@
+<ng-template #modalAgregarAmigo let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title"></h2>
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <p>Agregar a {{usuario.nombre}} {{usuario.apellido}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="agregarAmigo()">Aceptar</button>
+    </div>
+</ng-template>
+<button id="delete" (click)="open(modalAgregarAmigo)" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Eliminar
+</button>

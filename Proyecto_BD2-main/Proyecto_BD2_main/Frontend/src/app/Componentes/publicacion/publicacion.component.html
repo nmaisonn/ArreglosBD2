@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <div class="d-flex justify-content-end" *ngIf="publicacion" [ngStyle]="{backgroundColor:getColor()}">
+      <span class="etiqueta">Presencial</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title text-center">{{publicacion.nombre}}</h3>
+    <div>
+      <p class="card-text">Descripcion: {{publicacion.descripcion}} </p>
+    </div>
+    <div *ngIf="usuario">
+      <p class="card-text">Publicante: {{this.usuario.nombre}} {{this.usuario.apellido}}  </p>
+    </div>
+    <div *ngIf="habilidad">
+      <p class="card-text">Habilidad: {{this.habilidad.nombre}} </p>
+    </div>
+    <div>
+      <p class="card-text">Fecha Publicado: {{publicacion.fechaalta}} </p>
+    </div>
+    <div *ngIf="direccion" >
+      <div >
+        <p class="card-text">Calle: {{this.direccion.calle}} </p>
+      </div>
+      <div>
+        <p class="card-text">Numero: {{this.direccion.numero}} </p>
+      </div>
+      <div>
+        <p class="card-text">Esquina: {{this.direccion.esquina}} </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer" *ngIf="this.usuario">
+    <div *ngIf="this.publicacion.fkidusuario != this.idUsuarioLogueado; else opcionEliminar">
+      <app-modal-solicitar-cita [publicacion] = "publicacion" (publicacionAgregada)="onPublicacionAgregada()"></app-modal-solicitar-cita>
+    </div>
+    <ng-template #opcionEliminar>
+      <button type="button" class="btn btn-danger" (click)="deletePublicacion()">Eliminar</button>
+    </ng-template>
+  </div>
+</div>

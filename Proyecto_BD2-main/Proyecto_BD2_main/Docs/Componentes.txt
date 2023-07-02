@@ -1,0 +1,22 @@
+Componente Registro
+Componente Login
+Componente buscador(Nav-Bar)
+Componente CatalogoPublicaciones (lista publicacion)
+	Componente publicacion
+	Componente btnAgregar
+Componente footer
+Componente persona
+	Componente publicacion
+Componente modal AgregarPublicacion
+Componente CatalogoAmigos (Lista amigos)
+Componente modal AgregarHabilitades
+Compnente CatalogoHistorial
+	Componente catalogoPublicacionesRealizadas
+	Componente catalogoPublicacionesRecibidas
+	Componente publicacion
+	Componente modal clasificacion
+Componente modal Clasificacion
+Componente preguntas frecuentes
+Componente solicitudes pendientes 
+	
+

@@ -1,0 +1,16 @@
+<div class="card">
+    <div *ngIf="publicacion" class="card-body">
+        <h3 *ngIf="cita.publicacion" class="card-title text-center">{{publicacion.nombre}}</h3>
+        <div *ngIf="usuario">
+            <p class="card-text">Publicante: {{usuario.nombre}} </p>
+        </div>
+        <div *ngIf="habilidad">
+            <p class="card-text">Habilidad: {{habilidad.nombre}} </p>
+        </div>
+        <div class="d-flex justify-content-end" *ngIf="cita" [ngStyle]="{backgroundColor:getColor()}">
+            <span class="etiqueta">Completada</span>
+        </div>
+
+    </div>
+    <!-- <app-modal-publicacion-realizada [citaCompleta]="cita"></app-modal-publicacion-realizada> -->
+</div>

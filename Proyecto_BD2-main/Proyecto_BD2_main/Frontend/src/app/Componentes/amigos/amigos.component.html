@@ -1,0 +1,8 @@
+<div class="div-fuera">
+    <div class="full-height">
+        <h1>Amigos</h1>
+        <div *ngFor="let amigo of amigos" class="list-group">
+            <app-amigo-item [infoAmigo]="amigo"></app-amigo-item>
+        </div>
+    </div>
+</div>

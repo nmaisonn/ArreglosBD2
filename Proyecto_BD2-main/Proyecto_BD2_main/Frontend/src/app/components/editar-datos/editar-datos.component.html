@@ -1,0 +1,35 @@
+<div class="div-fuera">
+    <div class="full-height">
+        <div class="div-fuera">
+            <div class="full-height">
+              <div id="container">
+                <div id="login">
+                  <h3>Editar datos</h3>
+                  <form id="formulario">
+                    
+                    <label>Información Personal</label>
+                    <input name="nombre" [(ngModel)]="nombre"  placeholder="Nombre">
+                    <input [(ngModel)]="apellido" name="apellido" placeholder="Apellido">
+                    
+                    <label>Dirección</label>
+
+                    <select (change)="update($event)">
+                      <option value="default">Barrio</option>
+                      <option value="{{ item.idbarrio }}" *ngFor="let item of barrios">
+                        {{ item.nombre }}
+                      </option>
+                    </select>
+                    
+                    <input [(ngModel)]="calle" name="calle" placeholder="Calle">
+                    <input [(ngModel)]="esquina" name="esquina" placeholder="Esquina">
+                    <input [(ngModel)]="numpuerta" name="numpuerta" placeholder="Número de puerta">
+          
+                    <button
+                      (click)="editarDatos(nombre,apellido,calle,esquina,numpuerta)">Editar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

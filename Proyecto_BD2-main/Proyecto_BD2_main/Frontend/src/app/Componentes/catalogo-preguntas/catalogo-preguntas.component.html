@@ -1,0 +1,9 @@
+<div class="div-fuera">
+    <div class="full-height">
+        <h3>Preguntas Frecuentes</h3>
+        <br>
+        <div id="catalogoPublicaciones" *ngFor="let xPregunta of this.preguntasFrecuentes">
+            <app-pregunta [pregunta]="xPregunta" class="pregunta-item"></app-pregunta>
+          </div>
+    </div>
+</div>

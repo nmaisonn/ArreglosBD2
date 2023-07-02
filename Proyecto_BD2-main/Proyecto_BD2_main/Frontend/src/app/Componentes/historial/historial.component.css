@@ -1,0 +1,38 @@
+.div-fuera {
+
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.realizadas,
+.recibidas {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}

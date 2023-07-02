@@ -1,0 +1,14 @@
+<div class="div-fuera">
+    <div class="full-height">
+        <div>
+            <form>
+                <input [(ngModel)]="filtro" name="filtro" type="text" type="text" placeholder="Filtro">
+                <button (click)="buscar()">Buscar</button>
+            </form>
+        </div>
+        <h1>Usuarios</h1>
+        <div *ngFor="let usuario of usuarios" class="list-group">
+            <app-catalogo-usuario-item [infoUsuario]="usuario" (notificar)="onNotificado()"></app-catalogo-usuario-item>
+        </div>
+    </div>
+</div>

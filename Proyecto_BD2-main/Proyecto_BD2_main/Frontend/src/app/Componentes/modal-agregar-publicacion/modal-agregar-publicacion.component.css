@@ -1,0 +1,26 @@
+#btnAgregarPubli {
+  width: 100%;
+  padding: 10px;
+  background-color: #077f0f;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 10px;
+}
+
+.divs {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.divs label,
+.divs input,
+.divs select,
+.divs textarea {
+  margin-right: 10px;
+}
+
+#divDescripcion{
+  align-items: center;
+  align-content: center;
+}

@@ -1,0 +1,44 @@
+<ng-template #modalPublicacion let-c="close" let-d="dismiss" class="modal-centered">
+    <div *ngIf='citaCompleta.publicacion' class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">{{citaCompleta.publicacion.nombre}}</h2>
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div *ngIf='citaCompleta' class="modal-body">
+        <h3 class="card-title text-center">{{citaCompleta.publicacion.nombre}}</h3>
+        <div *ngIf='citaCompleta.publicacion'>
+            <p class="card-text">Descripcion: {{citaCompleta.publicacion.descripcion}} </p>
+        </div>
+        <div *ngIf="citaCompleta.usuario">
+            <p class="card-text">Publicante: {{citaCompleta.usuario.nombre}} </p>
+        </div>
+        <div *ngIf="citaCompleta.publicacion.habilidad">
+            <p class="card-text">Habilidad: {{citaCompleta.publicacion.nombre}} </p>
+        </div>
+        <div *ngIf='citaCompleta.publicacion'>
+            <p class="card-text">Fecha Publicado: {{citaCompleta.publicacion.fechaAlta}} </p>
+        </div>
+        <div *ngIf="citaCompleta.direccion">
+            <p class="card-text">Calle: {{citaCompleta.direccion.calle}} </p>
+        </div>
+        <div *ngIf="citaCompleta.direccion">
+            <p class="card-text">Numero: {{citaCompleta.direccion.numero}} </p>
+        </div>
+        <div *ngIf="citaCompleta.direccion">
+            <p class="card-text">Esquina: {{citaCompleta.direccion.esquina}} </p>
+        </div>
+        <div id="calificacion" *ngIf="citaCompleta.fechaFin">
+            <ngb-rating [max]=5 [(rate)]="currentRate"></ngb-rating>
+            <hr />
+            <input type="text" [(ngModel)]="descripcion" [readonly]="calificacion.fkIdCalificacion != 0">
+            <button *ngIf='!(calificacion.fkIdCalificacion!=0)' type="button" class="btn btn-outline-dark"
+                (click)="guardarCalificacion()">Guardar Calificacion</button>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-outline-dark" (click)="close()">Aceptar</button>
+    </div>
+</ng-template>
+
+<button id="delete" class="btn btn-primary" (click)="open(modalPublicacion)" data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop1">Ver mas
+</button>

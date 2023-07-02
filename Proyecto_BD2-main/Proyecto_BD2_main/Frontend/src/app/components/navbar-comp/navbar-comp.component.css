@@ -1,0 +1,82 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #fafbfc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #0c1c3a;
+}
+
+
+
+.logo img {
+  height: 40px;
+  background-color: #0c1c3a;
+  padding: 5px;
+  border-radius: 4px;
+  width: auto;
+}
+
+
+
+
+
+
+.menu-links {
+  display: flex;
+}
+
+.menu-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.menu-links a:hover {
+  background-color: #3d5580;
+  color: #ffffff;
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+  .menu-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ff0000;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-links a {
+    display: block;
+    color: #0c1c3a;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  .menu-links a:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+}
+
+.router-outlet {
+  margin-top: 20px;
+}

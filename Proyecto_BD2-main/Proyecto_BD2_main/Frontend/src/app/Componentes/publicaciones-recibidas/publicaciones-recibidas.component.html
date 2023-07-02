@@ -1,0 +1,32 @@
+<div class="card">
+    <div *ngIf="publicacion" class="card-body">
+        <h3 *ngIf="cita.publicacion" class="card-title text-center">{{publicacion.nombre}}</h3>
+        <div *ngIf="usuario">
+            <p class="card-text">Publicante: {{usuario.nombre}} </p>
+        </div>
+        <div *ngIf="habilidad">
+            <p class="card-text">Habilidad: {{habilidad.nombre}} </p>
+        </div>
+        <div>
+            <p class="card-text">Fecha Inicio: {{cita.fechainicio}} </p>
+        </div>
+        <div>
+            <p class="card-text">FechaFin: {{cita.fechafin}} </p>
+        </div>
+        <div class="d-flex inline-block justify-content-end" *ngIf="cita">
+            <span> Estado: </span>
+            <span class="etiqueta" [ngStyle]="{backgroundColor:getColor()}">Completada</span>
+        </div>
+        <div id="calificacion" *ngIf="calificacionCita">
+            <div *ngIf="cita.fechafin">
+                <span>Calificacion:</span>
+                <ngb-rating [max]=5 [(rate)]="currentRate"></ngb-rating>
+                <input type="text" [(ngModel)]="descripcion" [readonly]="calificacionCita.fkidcalificacion != 0">
+                <button *ngIf='!(calificacionCita.fkidcalificacion!=0)' type="button" class="btn btn-outline-dark"
+                    (click)="guardarCalificacion()">Guardar Calificacion</button>
+            </div>
+        </div>
+    </div>
+    <!-- <app-modal-publicacion-cita-recibida [citaCompleta]="cita"
+        [calificacion]="calificacionCita"></app-modal-publicacion-cita-recibida> -->
+</div>

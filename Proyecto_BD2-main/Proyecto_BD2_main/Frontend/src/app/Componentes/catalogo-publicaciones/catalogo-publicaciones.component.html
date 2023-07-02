@@ -1,0 +1,21 @@
+<div class="div-fuera">
+  <div class="full-height">
+        <div>
+            <form>
+                <input [(ngModel)]="filtro" name="filtro" type="text" type="text" placeholder="Filtro">
+                <button (click)="buscar()">Buscar</button>
+            </form>
+        </div>
+      <br />
+      <app-modal-agregar-publicacion (publicacionAgregada)="llegoActualizacion()"></app-modal-agregar-publicacion>
+      <div
+        id="catalogoPublicaciones"
+        *ngFor="let xPublicacion of this.publicaciones">
+        <app-publicacion
+          [publicacion]="xPublicacion"
+          (publicacionEliminada)="llegoActualizacion()"
+        ></app-publicacion>
+      </div>
+    </div>
+  
+</div>

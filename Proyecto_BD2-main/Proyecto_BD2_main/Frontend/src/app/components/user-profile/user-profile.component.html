@@ -1,0 +1,53 @@
+<div class="div-fuera">
+  <div class="full-height">
+    <div class="user-profile">
+      <h3>Información Personal</h3>
+      <div class="personal-info">
+        <div class="photo-datos">
+          <img src="../../../assets/perfil.jpg" alt="Foto de perfil">
+          <div class="nombre-direcc">
+            <h2>{{ user.nombre }} {{ user.apellido }}</h2>
+            <label>Dirección: {{ direccion.calle }} {{direccion.numero}} Esquina {{ direccion.esquina}}, {{
+              barrio.nombre }}</label>
+          </div>
+          <a href="/editarDatos"><button>Editar</button></a>
+        </div>
+      </div>
+
+      <div class="amigos">
+        <a href="/friends">
+          <h3>Ver amigos</h3>
+        </a>
+      </div>
+
+      <div class="skills">
+        <h3>Habilidades:</h3>
+
+        <select (change)="update($event)">
+          <option value="default">Agregar Habilidad</option>
+          <option value={{item.idhabilidad}} *ngFor="let item of habilidadesBD">
+            {{item.nombre}}
+          </option>
+        </select>
+
+
+        <button (click)="agregarSkill()">+</button>
+
+        <div *ngFor="let skill of habilidades">
+          <label>{{skill.nombre}}</label>
+          <button class="borrar" (click)="borrarSkill(skill.idhabilidad)">X</button>
+        </div>
+
+      </div>
+
+      <div class="publications">
+        <h3>Publicaciones:</h3>
+        <div class="publication-cards">
+          <div class="card" *ngFor="let publication of publicaciones">
+            <app-publicacion [publicacion]=publication (publicacionEliminada)="coso()"></app-publicacion>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

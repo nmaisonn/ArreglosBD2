@@ -1,0 +1,12 @@
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.card-footer button:first-child {
+    margin-right: 10px;
+}
+
+.card {
+    margin-bottom: 10px; /* Ajusta el valor según el espaciado deseado */
+}   

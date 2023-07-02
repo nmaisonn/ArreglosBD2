@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+      <h5>Informacion Servicio</h5>
+    </div>
+    <div class="card-body">
+      <div *ngIf="this.cita.publicacion">
+        <p class="card-text">Publicacion Solicitada: {{cita.publicacion.nombre}} </p>
+      </div>
+      <div *ngIf="this.cita.usuario">
+        <p class="card-text">Solicitante: {{cita.usuario.nombre}} {{cita.usuario.apellido}}</p>
+      </div>
+      <div>
+        <p class="card-text">Fecha Solicitada: {{cita.fechasolicitada}} </p>
+      </div>
+      <div *ngIf="this.cita.direccion">
+        <div>
+          <p class="card-text">Calle: {{cita.direccion.calle}} </p>
+        </div>
+        <div>
+          <p class="card-text">Numero: {{cita.direccion.numero}} </p>
+        </div>
+        <div>
+          <p class="card-text">Esquina: {{cita.direccion.esquina}} </p>
+        </div>
+      </div>
+    <div class="card-footer" *ngIf="flag">
+      <button type="button" class="btn btn-primary" (click)="addCita()">Aceptar</button>
+      <button type="button" class="btn btn-danger" (click)="cancelCita()">Rechazar</button>
+    </div>
+  </div>

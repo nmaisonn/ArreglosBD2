@@ -1,0 +1,19 @@
+<div class="div-fuera">
+  <div class="full-height">
+    <nav>
+      <a href="/citas">Todas</a>
+      <a href="/citas/pendientes">Pendientes</a>
+      <a href="/citas/proceso">En proceso</a>
+      <a href="/citas/finalizadas">Finalizadas</a>
+    </nav>
+    <div class="publications">
+      <h3>Citas:</h3>
+      <div class="publication-cards">
+        <div *ngFor="let cita of citas">
+          <app-solicitud-servicios [cita]="cita"></app-solicitud-servicios>
+          <!-- METER COMPONENTE DE LAS CITAS -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
