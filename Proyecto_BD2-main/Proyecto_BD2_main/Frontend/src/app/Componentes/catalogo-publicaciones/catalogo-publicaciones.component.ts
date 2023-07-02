@@ -22,6 +22,8 @@ export class CatalogoPublicacionesComponent {
   habilidad: Habilidad | any
   barrio:Barrio|any
 
+  idUsuarioLogueado = localStorage.getItem("idusuario");
+
   constructor(private skillService:HabiliadadService,private barrioService: BarrioService,private publicacionesService: PublicacionService, private habilidadService: HabiliadadService, private usuarioService: UsuarioService, private direccionService: DireccionService) { }
   
 filtro:string=""
@@ -32,7 +34,11 @@ filtro:string=""
 
   getPublicaciones(): void {
     console.log("Entro al getPublicaciones del catalogo")
-    this.publicacionesService.getPublicaciones().subscribe(res => {
+    // this.publicacionesService.getPublicaciones().subscribe(res => {
+    //   this.publicaciones = res.msg;
+    // });    
+    this.publicacionesService.getPublicacionesDashboard(this.idUsuarioLogueado).subscribe(res => {
+      console.log(res.msg)
       this.publicaciones = res.msg;
     });    
   }

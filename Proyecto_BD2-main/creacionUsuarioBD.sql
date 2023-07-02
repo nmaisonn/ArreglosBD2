@@ -1,0 +1,12 @@
+CREATE ROLE invitado WITH LOGIN PASSWORD 'contra';
+GRANT SELECT, INSERT, UPDATE ON amigos TO invitado;
+GRANT SELECT ON barrios TO invitado;
+GRANT SELECT ON calificaciones TO invitado;
+GRANT SELECT, INSERT, UPDATE ON direcciones TO invitado;
+GRANT SELECT ON habilidades TO invitado;
+GRANT SELECT ON preguntas_frecuentes TO invitado;
+GRANT SELECT, INSERT, UPDATE ON publicaciones TO invitado;
+GRANT SELECT ON usuarios TO invitado;
+GRANT SELECT, INSERT, UPDATE ON usuarios_habilidades TO invitado;
+GRANT SELECT, INSERT, UPDATE ON usuarios_publicaciones TO invitado;
+GRANT SELECT, INSERT ON usuarios_publicaciones_calificaciones TO invitado;

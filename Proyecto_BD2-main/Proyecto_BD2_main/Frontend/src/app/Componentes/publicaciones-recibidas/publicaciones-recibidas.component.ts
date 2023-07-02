@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Publicacion } from 'src/app/Entitis/Publicacion';
 import { Input } from '@angular/core';
 import { Cita } from 'src/app/Entitis/Cita';
@@ -20,6 +20,7 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class PublicacionesRecibidasComponent {
   @Input() cita: Cita | any;
+  @Output() emitir = new EventEmitter<void>();
   calificacionCita: CalificacionCita | any;
   usuario: Usuario | any;
   publicacion: Publicacion | any;
@@ -27,6 +28,7 @@ export class PublicacionesRecibidasComponent {
   prueba: any;
   currentRate = 0;
   descripcion = '';
+  readonly :boolean = false;
 
   constructor(private citaservice: CitaService, private usuarioSerivce: UsuarioService, private publicacionService: PublicacionService, private habilidadService: HabiliadadService, private configRating: NgbRatingConfig) { }
 
@@ -56,7 +58,9 @@ export class PublicacionesRecibidasComponent {
           this.currentRate = this.calificacionCita.fkidcalificacion;
           this.descripcion = this.calificacionCita.comentario;
           this.configRating.readonly = true;
+          this.readonly = true;
         } else {
+          this.calificacionCita = new CalificacionCita();
           this.configRating.readonly = false;
         }
       });
@@ -79,6 +83,7 @@ export class PublicacionesRecibidasComponent {
     console.log(id, this.cita.fkidpublicacion, this.currentRate, this.descripcion)
     this.publicacionService.ratePublicacionRecibida(Number(id), this.cita.fkidpublicacion, this.currentRate, this.descripcion).subscribe((res) => {
       console.log(res)
+      this.emitir.emit();
     });
   }
 

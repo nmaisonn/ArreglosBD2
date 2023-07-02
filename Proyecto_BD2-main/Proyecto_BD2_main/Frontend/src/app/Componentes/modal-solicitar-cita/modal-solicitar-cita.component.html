@@ -23,7 +23,7 @@
     <div>
       <p class="card-text">Fecha Publicado: {{publicacion.fechaalta}} </p>
     </div>
-    <div *ngIf="direccion" >
+    <div *ngIf="direccion && !this.publicacion.espresencial" >
       <div >
         <p class="card-text">Calle: {{this.direccion.calle}} </p>
       </div>

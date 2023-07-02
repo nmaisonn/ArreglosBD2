@@ -21,8 +21,8 @@
             <div *ngIf="cita.fechafin">
                 <span>Calificacion:</span>
                 <ngb-rating [max]=5 [(rate)]="currentRate"></ngb-rating>
-                <input type="text" [(ngModel)]="descripcion" [readonly]="calificacionCita.fkidcalificacion != 0">
-                <button *ngIf='!(calificacionCita.fkidcalificacion!=0)' type="button" class="btn btn-outline-dark"
+                <input type="text" [(ngModel)]="descripcion" [readonly]="readonly">
+                <button *ngIf='(calificacionCita.comentario == "")' type="button" class="btn btn-outline-dark"
                     (click)="guardarCalificacion()">Guardar Calificacion</button>
             </div>
         </div>

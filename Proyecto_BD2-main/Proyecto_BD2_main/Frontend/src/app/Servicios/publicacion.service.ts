@@ -23,6 +23,11 @@ export class PublicacionService {
     return respuesta
   }
 
+  getPublicacionesDashboard(idusuario:any) {
+    let respuesta = this.http.get<any>(this.webApiUrl + 'getPublicacionesDashboard?idusuario=' + idusuario);
+    return respuesta
+  }
+
   addPublicacion(titulo: string, descripcion: string, presencial: boolean | null, idDireccion: number, idHabilidad: number, idUsuario: any) {
     let respuesta = this.http.post<any>(this.webApiUrl + 'addPublicacion', { titulo, descripcion, presencial, idDireccion, idHabilidad, idUsuario })
     return respuesta
@@ -73,5 +78,4 @@ export class PublicacionService {
     let respuesta = this.http.get<any>(this.webApiUrl + 'getUsuariosFiltrados?filtro=' + filtro+"&idusuario="+id);
     return respuesta
   }
-
 }

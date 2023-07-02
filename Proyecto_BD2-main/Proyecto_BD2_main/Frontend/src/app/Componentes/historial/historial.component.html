@@ -11,7 +11,7 @@
             <div class="recibidas col">
                 <h2>Citas Solicitadas</h2>
                 <div *ngFor="let cita of citasRecibidas">
-                    <app-publicaciones-recibidas [cita]="cita"></app-publicaciones-recibidas>
+                    <app-publicaciones-recibidas (emitir)="llegoActualizacion()" [cita]="cita"></app-publicaciones-recibidas>
                 </div>
             </div>
         </div>

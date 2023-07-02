@@ -54,6 +54,10 @@ export class HistorialComponent {
       console.log(this.citasRealizadas)
     });
   }
+
+  llegoActualizacion():void{
+    this.getPublicacionesRecibidasById();
+  }
 }
 
 
