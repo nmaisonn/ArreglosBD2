@@ -278,13 +278,11 @@ app.get('/getPublicaciones', auth(), async (req, res) => {
 app.get('/getPublicacionesDashboard', auth(), async (req, res) => {
   const idusuario = req.query.idusuario;
   console.log(idusuario)
-  const query = `SELECT * FROM usuarios_publicaciones
-                JOIN publicaciones ON usuarios_publicaciones.fkidpublicacion = publicaciones.idpublicacion
-                WHERE usuarios_publicaciones.fkidusuario <> ${idusuario}
-                AND usuarios_publicaciones.fkidpublicacion NOT IN (
+  const query = `SELECT p.* FROM publicaciones as p
+                where p.fechabaja is null and p.idpublicacion not in(
                 SELECT fkidpublicacion
                 FROM usuarios_publicaciones
-              WHERE fkidusuario = ${idusuario})`
+                WHERE fkidusuario = ${idusuario})`
   try {
     await executeQueryWithTransaction(query, (error, result) => {
       if (error) {
