@@ -39,7 +39,7 @@ export class ModalSolicitarCitaComponent {
     console.log(this.publicacion);
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' })
     this.barrioService.getBarrios().subscribe(res => {
-      this.barrios = res.barrios;
+      this.barrios = res.msg;
     });
     this.habilidadService.getHabilidadById(this.publicacion.fkidhabilidad).subscribe(res =>{
       this.habilidad = res.msg;
@@ -113,12 +113,12 @@ export class ModalSolicitarCitaComponent {
   }
 
   update(e: any) {
-    let selectedObject = {};
+    let selectedObject = {}
     this.barrios.map((res: any) => {
-      if (e.target.value == res.id) {
-        selectedObject = res;
+      if (e.target.value == res.idbarrio) {
+        selectedObject = res
       }
-    });
+    })
     this.barrio = selectedObject
   }
 }

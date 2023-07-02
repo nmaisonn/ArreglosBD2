@@ -25,6 +25,7 @@ export class CitasDashboardEnprocComponent implements OnInit{
   }
 
   finalizarCita(cita:any){
+    console.log(cita)
     this.citasService.pasarAFinalizadas(cita.fkidusuario,cita.fkidpublicacion).subscribe(res=>{
       console.log(res.msg)
     })

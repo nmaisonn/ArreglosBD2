@@ -56,12 +56,14 @@
       </div>
       <div class="divs" >
         <label for="barrios">Barrio:</label>
+
         <select (change)="update($event)">
-          <option value="default">Seleccionar Barrio</option>
-          <option value="{{ item.idBarrio }}" *ngFor="let item of barrios">
+          <option value="default">Barrio</option>
+          <option value="{{ item.idbarrio }}" *ngFor="let item of barrios">
             {{ item.nombre }}
           </option>
         </select>
+        
       </div>
     </div>
   </div>
