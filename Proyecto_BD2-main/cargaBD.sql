@@ -94,10 +94,6 @@ VALUES ('Servicio de reparación de electrodomésticos', 'Ofrezco servicios de r
 ('Clases de piano', 'Ofrezco clases de piano para estudiantes de todas las edades y niveles. Enseñó técnicas de interpretación, teoría musical y repertorio variado. ¡Ven y descubre el maravilloso mundo de la música!', '2023-07-02', null, true, 5, 7, 4),
 ('Asesoría financiera personalizada', 'Brindó asesoramiento financiero personalizado para ayudarte a alcanzar tus metas financieras. Analizo tu situación actual, desarrollo estrategias y te proporcionó recomendaciones claras y concisas.', '2023-07-03', null, false, 3, 7, 5), ('Traducción de documentos', 'Realizo traducciones precisas y profesionales de documentos en varios idiomas. Ya sea que necesites traducir documentos legales, técnicos o generales, puedo ayudarte a comunicarte efectivamente.', '2023-07-04', null, true, 3, 6, 6);
 
-INSERT INTO usuarios_publicaciones (FkIdUsuario, FkIdPublicacion, FkIdDireccion, FechaSolicitud, FechaSolicitada, FechaAlta, FechaBaja, FechaInicio, FechaFin)
-VALUES (2,6,1,'2023-07-23','2023-07-23','2032-07-23',null,'2023-07-24',null),
-(3,5,1,'2023-07-23','2023-07-23','2023-07-23',null,'2023-07-24', '2023-07-24');
-
 INSERT INTO usuarios_publicaciones (FkIdUsuario, FkIdPublicacion, FkIdDireccion, FechaSolicitud, FechaSolicitada, FechaAlta, FechaBaja, FechaInicio, FechaFin) VALUES 
 (2,1,1,'2023-05-05','2023-06-06',null,null,null,null), (3,1,2,'2023-05-05','2023-06-06','2023-06-25',null,null,null),
 (4,1,3,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27',null),

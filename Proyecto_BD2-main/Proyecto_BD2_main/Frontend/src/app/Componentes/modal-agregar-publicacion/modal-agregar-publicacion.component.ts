@@ -101,6 +101,7 @@ export class ModalAgregarPublicacionComponent {
         alertElement.remove();
       }, 3000);
     }
+    this.modalService.dismissAll();
   }
 
   validarCampos(){
