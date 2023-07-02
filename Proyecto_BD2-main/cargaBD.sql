@@ -104,8 +104,10 @@ INSERT INTO usuarios_publicaciones (FkIdUsuario, FkIdPublicacion, FkIdDireccion,
 (5,1,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03'),
 (2,7,1,'2023-05-05','2023-06-06',null,null,null,null), (3,7,2,'2023-05-05','2023-06-06','2023-06-25',null,null,null),
 (4,7,3,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27',null),
-(5,7,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03');
+(5,7,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03'),
+(7,2,3,'2023-06-28','2023-06-28','2023-06-28',null, '2023-06-20','2023-06-20'),
+(7,4,3,'2023-06-28','2023-06-28','2023-06-28',null, '2023-06-20','2023-06-20');
 
 INSERT INTO usuarios_publicaciones_calificaciones (FkIdUsuario,FkIdPublicacion,FkIdCalificacion,comentario)
-VALUES (5,1,5,'Muy bueno trabajo.'),(5,7,3,'Mal trato');
+VALUES (5,1,5,'Muy bueno trabajo.'),(5,7,3,'Mal trato'),(7,4,3,'todo good');
 
