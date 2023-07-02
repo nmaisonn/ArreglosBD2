@@ -55,9 +55,9 @@ VALUES ('Pepe','Martinez','2345678', '' ,'2002-08-28','2023-07-23',null,1),
 INSERT INTO amigos (FkIdUsuario, FkIdAmigo , FechaSolicitud , FechaAlta , FechaBaja ) 
 VALUES (7,2,'2023-07-23','2023-07-23',null),
 (7,3,'2023-07-23','2023-06-23',null),
-(7,4, '2023-06-26',null,null ),
+(4,7, '2023-06-26',null,null ),
 (7,5, '2023-06-26', '2023-06-26',null),
-(7,6, '2023-06-26', null, null),
+(6,7, '2023-06-26', null, null),
 (8,2,'2023-07-23','2023-07-23',null),
 (8,3,'2023-07-23','2023-06-23',null),
 (8,4, '2023-06-26',null,null ),
@@ -104,7 +104,9 @@ INSERT INTO usuarios_publicaciones (FkIdUsuario, FkIdPublicacion, FkIdDireccion,
 (5,1,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03'),
 (2,7,1,'2023-05-05','2023-06-06',null,null,null,null), (3,7,2,'2023-05-05','2023-06-06','2023-06-25',null,null,null),
 (4,7,3,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27',null),
-(5,7,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03');
+(5,7,4,'2023-05-05','2023-06-06','2023-06-25',null,'2023-06-27','2023-07-03'),
+(2,6,1,'2023-05-05','2023-06-06','2023-06-28',null,'2023-06-28','2023-06-28'), 
+(4,6,2,'2023-06-28','2023-06-28','2023-06-28',null, '2023-06-28',null);
 
 INSERT INTO usuarios_publicaciones_calificaciones (FkIdUsuario,FkIdPublicacion,FkIdCalificacion,comentario)
 VALUES (5,1,5,'Muy bueno trabajo.'),(5,7,3,'Mal trato');
