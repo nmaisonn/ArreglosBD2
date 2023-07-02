@@ -1393,7 +1393,7 @@ app.post('/pasarAEnProceso', auth(), async (req, res) => {
   const year = fechaActual.getFullYear();
   const month = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
   const day = fechaActual.getDate().toString().padStart(2, '0');
-  const fechaAlt = `${year} -${month} -${day} `;
+  const fechaAlt = `${year}-${month}-${day}`;
   console.log(fechaAlt)
 
   const query = `update usuarios_publicaciones
@@ -1419,7 +1419,7 @@ app.post('/cancelarCita', auth(), async (req, res) => {
   const year = fechaActual.getFullYear();
   const month = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
   const day = fechaActual.getDate().toString().padStart(2, '0');
-  const fechaAlt = `${year} -${month} -${day} `;
+  const fechaAlt = `${year}-${month}-${day}`;
   console.log(fechaAlt)
 
   const query = `update usuarios_publicaciones
@@ -1445,7 +1445,7 @@ app.post('/pasarAFinalizadas', auth(), async (req, res) => {
   const year = fechaActual.getFullYear();
   const month = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
   const day = fechaActual.getDate().toString().padStart(2, '0');
-  const fechaAlt = `${year} -${month} -${day} `;
+  const fechaAlt = `${year}-${month}-${day}`;
   console.log(fechaAlt)
 
   const query = `update usuarios_publicaciones
